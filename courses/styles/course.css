@@ -1286,7 +1286,7 @@ section
 }
 .accordion div
 {
-	max-width: 90%;
+	max-width: 100%;
 	overflow: hidden;
 	white-space: nowrap;
 	font-size: 14px;
@@ -1307,7 +1307,7 @@ section
 	color: rgba(0,0,0,0.4);
 	font-weight: 300;
 	vertical-align: middle;
-	margin-right: 20px;
+	margin-right: 10px;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -1342,7 +1342,7 @@ section
 }
 .accordion_panel p
 {
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: 400;
 	color: rgba(0,0,0,0.5);
 	line-height: 1.71;

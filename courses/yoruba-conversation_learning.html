@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Yoruba lesson">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="theme-color" content="#E45447">
 
 <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
@@ -15,6 +15,17 @@
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
 <link rel="stylesheet" type="text/css" href="styles/course.css">
 <link rel="stylesheet" type="text/css" href="styles/course_responsive.css">
+<script>
+  $(window).resize(function() {
+    var mobileWidth =  (window.innerWidth > 0) ? 
+                        window.innerWidth : 
+                        screen.width;
+    var viewport = (mobileWidth > 360) ?
+                    'width=device-width, initial-scale=1.0' :
+                    'width=1200';
+    $("meta[name=viewport]").attr('content', viewport);
+}).resize(); 
+</script>
 </head>
 <body>
 
@@ -94,7 +105,6 @@
 									<div class="col-lg-9">
 										<div class="tabs d-flex flex-row align-items-center justify-content-start">
 											<div class="tab active">begin lesson</div>
-											<div class="tab">about this lesson</div>
 											
 										</div>
 									</div>
@@ -106,8 +116,39 @@
 						<div class="tab_panel description active">
 								
 							<!-- Voc Lesson Begin -->
-							<div class="faqs" id="start">
-								<div class="panel_title">1. Time of Day Based Greetings</div>
+							<div id = "t"class="faqs" id="start">
+									<div class="container">
+											<div class="panel_title"><h3>Instructions</h3></div>
+											
+											<div><p>To get the best out of the lessons, carefully: </p></div>
+											<h><br></h>
+											<div class="list-group">
+												
+												<a href="#t" style="color:rgb(15, 16, 17);"  class="list-group-item">1. Listen to the voice</a>
+												<a href="#t" style="color:rgb(15, 16, 17);" class="list-group-item">2. Read the text (first) in Yorùbá and then in English</a>
+												<a href="#t" style="color:rgb(15, 16, 17);"  class="list-group-item">3. Read the Yorùbá text along with the voice</a>
+												<a href="#t" style="color:rgb(15, 16, 17);"  class="list-group-item">4. Repeat after the voice.<br> For greetings, you may share the characters between another learner</a>
+
+											</div>
+
+											<div class="alert alert-info">
+													<strong>NB!</strong> <br>Do this repeatedly until you feel comfortable you've mastered the conversation (one at a time, please).
+												 <br>
+												 <br>
+												 Immitate the voice. This puts your mouth through the conversations/exercises and helps you to pronounce the words/phrases/sentances in good Yorùbá (with correct tones).
+												<br>
+												The more you repeat, the more you get familiar with the content and language in use.
+												</div>
+										</div>
+								
+							
+								<h><br></h>
+								<div id = "startlesson" class="panel_title">1. Time of Day Based Greetings</div>
+								<br>
+								<div class="container">
+										<h4><div style="color:#1177BB;">Àárọ̀</div>Morning</h4>
+										
+								</div>
 								<div class="accordions">
 												
 									<div class="elements_accordions">
@@ -116,7 +157,7 @@
 
 
 										<div class="accordion_container">
-											<div class="accordion d-flex flex-row align-items-center "><div>Convers I: Ìkíni Láàrin Akin àti ìyá Rẹ̀ <br> Greetings between Akin and His Mother</div></div>
+											<div class="accordion d-flex flex-row align-items-center "><div>Convers I: <div style="color:#1177BB;">Ìkíni Láàrin Akin àti ìyá Rẹ̀</div> Greetings between Akin and His Mother</div></div>
 											
 											<div class="accordion_panel">
 
@@ -159,7 +200,7 @@
 
 
 										<div class="accordion_container">
-											<div class="accordion d-flex flex-row align-items-center "><div>Convers II: Ìkíni láàrin ọ̀rẹ́ méjì, Ronkẹ́ àti Ṣadé. <br> Greetings between two friends, Ronke and Sade.</div></div>
+											<div class="accordion d-flex flex-row align-items-center "><div>Convers II: <div style="color:#1177BB;">Ìkíni láàrin ọ̀rẹ́ méjì, Ronkẹ́ àti Ṣadé.</div> Greetings between two friends, Ronke and Sade.</div></div>
 											
 											<div class="accordion_panel">
 													<audio controls>
@@ -269,7 +310,7 @@
 <!--3-->
 
 										<div class="accordion_container">
-												<div class="accordion d-flex flex-row align-items-center"><div>Convers III: Ìkíni láàrin aládùúgbò  <br> Greetings between neighbours</div></div>
+												<div class="accordion d-flex flex-row align-items-center"><div>Convers III: <div style="color:#1177BB;">Ìkíni láàrin aládùúgbò </div>Greetings between neighbours</div></div>
 												
 												<div class="accordion_panel">
 														<audio controls>
@@ -409,11 +450,14 @@
 <!--End of lesson 3-->
 
 <!--4-->
-
+<div class="container">
+		<h4><div style="color:#1177BB;">Ọ̀sán</div>Afternoon</h4>
+		
+</div>
 
 <div class="accordion_container">
-		<div class="accordion d-flex flex-row align-items-center "><div>Convers IV: Ìkíni láàrin Olùkọ́ àti Akẹ́kọ̀ọ́ <br> Greetings between Teacher and Pupils <br>
-				(Àwọn akẹ́kọ̀ọ́ dìde dúró bí wọ́n ṣe rí olùkọ́. <br> The pupils stood when they saw the teacher.) </div></div>
+		<div class="accordion d-flex flex-row align-items-center "><div>Convers IV: <div style="color:#1177BB;">Ìkíni láàrin Olùkọ́ àti Akẹ́kọ̀ọ́ </div> Greetings between Teacher and Pupils
+				<div style="color:#1177BB;">Àwọn akẹ́kọ̀ọ́ dìde dúró bí wọ́n ṣe rí olùkọ́ </div> The pupils stood when they saw the teacher. </div></div>
 		
 		<div class="accordion_panel">
 				<audio controls>
@@ -467,8 +511,8 @@
 	<!--5-->
 
 	<div class="accordion_container">
-			<div class="accordion d-flex flex-row align-items-center"><div>Convers V: Ìkíni láàrin Délé àti Bàbá Rẹ̀ <br> Greetings between Délé and His Father <br>
-				(Délé dọ̀bálẹ̀ kí bàbá rẹ̀. <br> Délé prostrated to greet his father.)</div></div>
+			<div class="accordion d-flex flex-row align-items-center"><div>Convers V: <div style="color:#1177BB;">Ìkíni láàrin Délé àti Bàbá Rẹ̀ </div> Greetings between Délé and His Father <br>
+			<div style="color:#1177BB;">Délé dọ̀bálẹ̀ kí bàbá rẹ̀. </div> Délé prostrated to greet his father.</div></div>
 			
 			<div class="accordion_panel">
 					<audio controls>
@@ -513,10 +557,13 @@
 
 
 	<!--End of Lesson 5-->
-
+	<div class="container">
+			<h4><div style="color:#1177BB;">Ìrọ̀lẹ́</div>Evening</h4>
+			
+	</div>
 	<div class="accordion_container">
-			<div class="accordion d-flex flex-row align-items-center"><div>Convers VI: Ìkíni láàrin ọkùnrin méjì <br> Greetings between two men <br>
-					(Ọkùnrin méjì pàdé ara wọn lẹ̀yin iṣẹ́. <br> Two men met on their way from work.)</div></div>
+			<div class="accordion d-flex flex-row align-items-center"><div>Convers VI: <div style="color:#1177BB;">Ìkíni láàrin ọkùnrin méjì</div> Greetings between two men
+			<div style="color:#1177BB;">Ọkùnrin méjì pàdé ara wọn lẹ̀yin iṣẹ́.</div> Two men met on their way from work</div></div>
 			
 			<div class="accordion_panel">
 					<audio controls>
@@ -563,10 +610,13 @@
 
 
 	<!--6-->
-
+	<div class="container">
+			<h4><div style="color:#1177BB;">Alẹ́</div>Late Evening</h4>
+			
+	</div>
 	<div class="accordion_container">
-			<div class="accordion d-flex flex-row align-items-center"><div>Convers VII: Ìkíni láàrin Bímpé àti Ìyá Rẹ̀ <br> Greetings between Bímpé and Her Mother<br> 
-					(Bímpé kúnlẹ̀ kí ìyá rẹ̀. <br> Bímpé knelt to greet her mother.)</div></div>
+			<div class="accordion d-flex flex-row align-items-center"><div>Convers VII: <div style="color:#1177BB;">Ìkíni láàrin Bímpé àti Ìyá Rẹ̀ </div> Greetings between Bímpé and Her Mother
+			<div style="color:#1177BB;">Bímpé kúnlẹ̀ kí ìyá rẹ̀. </div> Bímpé knelt to greet her mother.</div></div>
 			
 			<div class="accordion_panel">
 					<audio controls>
@@ -606,7 +656,8 @@
 					
 			</div>
 		</div>
-
+	<br>
+		<button type="button"  class="btn btn-danger"><a style = "color: #FFF" href = "#startlesson">Repeat Lesson</a></button>
 
 	<!--End of Lesson 6-->
 
@@ -635,479 +686,6 @@
 
 
 
-						<!--Plesantaries Lesson started-->
-						
-
-						<div class="faqs" id="start">
-								<div class="panel_title">2. Pleasantries</div>
-								<div class="accordions">
-												
-									<div class="elements_accordions">
-
-<!--lesson 1-->
-
-										<div class="accordion_container">
-											<div class="accordion d-flex flex-row align-items-center "><div>Convers I: Ìkíni láàrin Ọkọ àti Ìyàwó <br> Greetings between Husband and Wife.<br> 
-													(Ọkọ ń kí Ìyàwó rẹ̀ lẹ́yìn tí ó dé láti ibi-iṣẹ́. <br> A husband is greeting his wife on his arrival from work.)  </div></div>
-											
-											<div class="accordion_panel">
-
-												<audio controls>
-													<source src="audio/oko_iyawo.mp3" type = "audio/mp3">
-														Your browser doesn't support the audio
-												</audio>
-													<div class="container" >
-															<table class="table table-hover">
-															
-															  <tbody>
-																<tr>
-																  <td><b>Ọkọ:</b></td>
-																  <td style="color:#E45447;">Ẹ kúulé o.</td>
-																  <td>Greetings to you. </td>
-																</tr>
-																<tr>
-																		<td><b>Aya:</b></td>
-																		<td style="color:#E45447;">Ẹ káàbọ̀ o.<br>Ẹ kú àtàárọ̀.</td>
-																		<td>Welcome. <br> Trust your day is fine.</td>
-																	  </tr>
-																	
-																	  <tr>
-																			<td><b>Ọkọ:</b></td>
-																			<td style="color:#E45447;">Ẹ ṣeun.</td>
-																			<td>Thank you.</td>
-																		  </tr>
-																		  <tr>
-																				<td><b>Ọkọ:</b></td>
-																				<td style="color:#E45447;">Ẹ kúulé o, aya mi.</td>
-																				<td>Greetings to you, my wife.</td>
-																			  </tr>
-																			  <tr>
-																					<td><b>Aya:</b></td>
-																					<td style="color:#E45447;">Ẹ káàbọ̀ o, ọkọ mi. <br>Ẹ kú àtàárọ̀.</td>
-																					<td>Welcome, my husband.<br>Trust your day is fine.</td>
-																				  </tr>
-																				  <tr>
-																						<td><b>Ọkọ:</b></td>
-																						<td style="color:#E45447;">Ẹ ṣeun, aya mi.</td>
-																						<td>Thank you.</td>
-																					  </tr>
-																		  
-															
-															  </tbody>
-															</table>
-														  </div>
-													
-											</div>
-										</div>
-
-<!--end of lesson 1-->
-
-
-										<!--lesson 2-->
-
-
-										<div class="accordion_container">
-											<div class="accordion d-flex flex-row align-items-center"><div>Convers II: Ìkíni láàrin ọ̀rẹ́ méjì, Olú àti Kọ́lá. <br> Greetings between two friends, Olú and Kọ́lá.<br> 
-													(Olú àti Kọ́lá ń dágbére fún ara wọn lẹ́yìn tí wọ́n parí ìpàdé. <br> Olú and Kọ́lá bid themselves farewell after 
-													their meeting.)  </div></div>
-											
-											<div class="accordion_panel">
-													<audio controls>
-															<source src="audio/olu_kola.mp3" type = "audio/mp3">
-																Your browser doesn't support the audio
-														</audio>
-													<div class="container" >
-															<table class="table table-hover">
-															
-															  <tbody>
-																<tr>
-																  <td><b>Olú:</b></td>
-																  <td style="color:#E45447;">Ó dàbọ̀ o, Kọ́lá.</td>
-																  <td>Good bye, Kọ́lá.</td>
-																</tr>
-																<tr>
-																		<td><b>Kọ́lá:</b></td>
-																		<td style="color:#E45447;">Ó dàbọ̀, Olú.</td>
-																		<td>Good bye, Olú.</td>
-																	  </tr>
-																	
-																	  <tr>
-																			<td><b>Olú:</b></td>
-																			<td style="color:#E45447;">Ká fire pàdé o.</td>
-																			<td>May we meet in peace.</td>
-																		  </tr>
-
-
-																		  <tr>
-																				<td><b>Kọ́lá:</b></td>
-																				<td style="color:#E45447;">Àṣẹ.</td>
-																				<td>Amen.</td>
-																			  </tr>
-
-
-																			  
-																			  <tr>
-																					<td><b></b></td>
-																					<td style="color:#E45447;"></td>
-																					<td></td>
-																				  </tr>
-																			  <tr>
-																					<td><b>Olú:</b></td>
-																					<td style="color:#E45447;">Ó dàbọ̀ o, Kọ́lá.</td>
-																					<td>Good bye, Kọ́lá.</td>
-																				  </tr>
-
-																				  <tr>
-																						<td><b>Kọ́lá:</b></td>
-																						<td style="color:#E45447;">Ó dàbọ̀, Olú.</td>
-																						<td>Good bye, Olú. </td>
-																					  </tr>
-
-																					  <tr>
-																							<td><b>Olú:</b></td>
-																							<td style="color:#E45447;">Ká fire pàdé o.</td>
-																							<td>May we meet in peace.</td>
-																						  </tr>
-
-																						  <tr>
-																								<td><b>Kọ́lá:</b></td>
-																								<td style="color:#E45447;">Àmín o.</td>
-																								<td>Amen. </td>
-																							  </tr>
-
-
-																					 
-															  </tbody>
-															</table>
-														  </div>
-													
-											</div>
-										</div>
-
-<!--end of lesson 2-->
-
-
-
-<!--3-->
-
-										<div class="accordion_container">
-												<div class="accordion d-flex flex-row align-items-center"><div>Convers III: Ìkíni láàrin Jídé àti Bàbá rẹ̀. <br> Greetings between Jídé and his Father.<br> 
-														(Jídé ń dágbére fún Bàbá rẹ̀ nígbà tí ó fẹ́ lọ sùn lálẹ́. <br> Jídé greets his father when he was about going to 
-														bed.)</div></div>
-												
-												<div class="accordion_panel">
-														<audio controls>
-																<source src="audio/jide_baba.mp3" type = "audio/mp3">
-																	Your browser doesn't support the audio
-															</audio>
-														<div class="container" >
-																<table class="table table-hover">
-																
-																  <tbody>
-																	  <!--1-->
-																	<tr>
-																	  <td><b>Jídé:</b></td>
-																	  <td style="color:#E45447;">Ó dàárọ̀ o, Baba. </td>
-																	  <td>Good night, Father. </td>
-																	</tr>
-																	<tr>
-																			<td><b>Bàbá: </b></td>
-																			<td style="color:#E45447;">Ó dàárọ̀ o, ọmọ mi.<br> Àsùnjí o.</td>
-																			<td>Good night, my son. <br> May we wake safely</td>
-																		  </tr>
-																		
-																		  <tr>
-																				<td><b>Jídé: </b></td>
-																				<td style="color:#E45447;">Àṣẹ o, Baba.</td>
-																				<td>Amen, Father.</td>
-																			  </tr>
-	
-																			  <tr>
-																					<td><b></b></td>
-																					<td style="color:#E45447;"></td>
-																					<td></td>
-																				  </tr>
-	
-																			  <tr>
-																					<td><b>Jídé:</b></td>
-																					<td style="color:#E45447;">Ó dàárọ̀ o, Baba. </td>
-																					<td>Good night, Father. </td>
-																				  </tr>
-	
-																				  <tr>
-																						<td><b>Bàbá:</b></td>
-																						<td style="color:#E45447;">Ó dàárọ̀ o, ọmọ mi. <br> Ọ̀kọ̀ọ̀kan la ó jí o.</td>
-																						<td>Good night, my son. <br> May we wake one after the other. 
-																								</td>
-																					  </tr>
-	
-																					  <tr>
-																							<td><b>Jídé:</b></td>
-																							<td style="color:#E45447;">Àmín o, Baba.</td>
-																							<td>Amen, Father. </td>
-																						  </tr>
-
-																						  <tr>
-																								<td><b></b></td>
-																								<td style="color:#E45447;"></td>
-																								<td></td>
-																							  </tr>
-																						  
-																							  <tr>
-																									<td><b>Jídé:</b></td>
-																									<td style="color:#E45447;">Ó dàárọ̀ o, Baba. </td>
-																									<td>Good night, Father. </td>
-																								  </tr>
-					
-																								  <tr>
-																										<td><b>Bàbá:</b></td>
-																										<td style="color:#E45447;">Ó dàárọ̀ o, ọmọ mi. <br> Oorun ire lá o sùn o.</td>
-																										<td>Good night, my son. <br> May we sleep in peace. 
-																												</td>
-																									  </tr>
-					
-																									  <tr>
-																											<td><b>Jídé:</b></td>
-																											<td style="color:#E45447;">Àṣẹ o, Baba.</td>
-																											<td>Amen, Father. </td>
-																										  </tr>
-				
-																																		  
-																
-																  </tbody>
-																</table>
-															  </div>
-														
-												</div>
-											</div>
-	
-<!--End of lesson 3-->
-
-<!--4-->
-
-
-<div class="accordion_container">
-		<div class="accordion d-flex flex-row align-items-center"><div>Convers IV: Ìkíni láàrin Ọmọ àti Ìyá rẹ̀<br>Greetings between a child and his mother <br>
-				(Ọmọ wá á kí Ìyá rẹ̀ nílé, ó sì ń dágbére nígbà tí ó fẹ́ máa lọ. <br> A child came home to greet his mother and <br>
-				was bidding her farewell when he was ready to leave.) </div></div>
-		
-		<div class="accordion_panel">
-				<audio controls>
-						<source src="audio/iyaomo.mp3" type = "audio/mp3">
-							Your browser doesn't support the audio
-					</audio>
-				<div class="container" >
-						<table class="table table-hover">
-						
-						  <tbody>
-							  <!--1-->
-							<tr>
-							  <td><b>Ọmọ:</b></td>
-							  <td style="color:#E45447;">Mo ti fẹ́ máa lọ o, Ìyá mi.</td>
-							  <td>Mother, I am about going.</td>
-							</tr>
-							<tr>
-									<td><b>Ìyá:</b></td>
-									<td style="color:#E45447;">Ó dáa. Ó dàbọ̀ o, ọmọ mi. <br> Láyọ̀ lo ó sọ̀ o.</td>
-									<td>Okay. Goodbye, my child.  <br> Safe Journey </td>
-								  </tr>
-								
-								  <tr>
-										<td><b>Ọmọ: </b></td>
-										<td style="color:#E45447;">Àmín o. Ẹ ṣeun, Ìyá mi.</td>
-										<td>Amen. Thank you, my mother.</td>
-									  </tr>
-
-									  <tr>
-											<td><b></b></td>
-											<td style="color:#E45447;"></td>
-											<td></td>
-										  </tr>
-
-									  <tr>
-											<td><b>Ọmọ:</b></td>
-											<td style="color:#E45447;">Mo ti fẹ́ máa lọ o, Ìyá mi.</td>
-											<td>Mother, I am about to go. </td>
-										  </tr>
-
-
-										  <tr>
-												<td><b>Ìyá:</b></td>
-												<td style="color:#E45447;">Ó dáa, Ó dàbọ̀ o, ọmọ mi. <br> Láyọ̀ lo ó dé o.</td>
-												<td>Okay, Goodbye, my daughter. <br> Safe journey. </td>
-											  </tr>
-
-
-											  <tr>
-													<td><b>Ọmọ:</b></td>
-													<td style="color:#E45447;">Àṣẹ o. Ẹ ṣeun, Ìyá mi. </td>
-													<td>Amen. Thank you, Mother.</td>
-												  </tr>
-
-										               
-																								  
-						
-						  </tbody>
-						</table>
-					  </div>
-				
-		</div>
-	</div>
-
-	<!--End of Lesson 4-->
-
-
-
-
-	<!--5-->
-
-	<div class="accordion_container">
-			<div class="accordion d-flex flex-row align-items-center"><div>Convers V: Ìkíni láàrin ọ̀rẹ́ méjì. <br> Greetings between two friends. <br>
-					(Ọkùnrin ń dágbére fún ọ̀rẹ́ rẹ̀ nígbà tí ó kí i tán nílé. <br> A man was bidding his friend farewell after paying <br>
-					him a visit.) </div></div>
-			
-			<div class="accordion_panel">
-					<audio controls>
-							<source src="audio/oremeji.mp3" type = "audio/mp3">
-								Your browser doesn't support the audio
-						</audio>
-					<div class="container" >
-							<table class="table table-hover">
-							
-							  <tbody>
-								  <!--1-->
-								<tr>
-								  <td><b>Ọ̀rẹ́ 1:</b></td>
-								  <td style="color:#E45447;">Ó dìgbà kan ná o, ọ̀rẹ́ mi.</td>
-								  <td>Goodbye, friend.</td>
-								</tr>
-								
-									  <tr>
-											<td><b>Ọ̀rẹ́ 2:</b></td>
-											<td style="color:#E45447;">  Ó dáa, Ó dàbọ̀ o. <br> Láyọ̀ la ó pàdé o.  </td>
-											<td>Okay, Goodbye. <br> May we meet in peace. 
-													 </td>
-										  </tr>
-	
-	
-										  <tr>
-												<td><b>Ọ̀rẹ́ 1:</b></td>
-												<td style="color:#E45447;">Àmín o.</td>
-												<td>Amen.</td>
-											  </tr>
-	
-											 
-																									  
-							
-							  </tbody>
-							</table>
-						  </div>
-					
-			</div>
-		</div>
-
-
-	<!--End of Lesson 5-->
-
-
-
-	<!--6-->
-
-	<div class="accordion_container">
-			<div class="accordion d-flex flex-row align-items-center"><div>Convers VI: Ìkíni láàrin ọ̀rẹ́ méjì. <br> Greetings between two friends. <br>
-					(Obìnrin kan ń ̣pe ọ̀rẹ́ rẹ̀ lórí ẹ̀rọ-ìbánisọ̀rọ̀ <br> láti kí i kú ọjọ́ mẹ́ta.<br> A woman is greeting her friend on 
-					phone.)</div></div>
-			
-			<div class="accordion_panel">
-					<audio controls>
-							<source src="audio/oremeji2.mp3" type = "audio/mp3">
-								Your browser doesn't support the audio
-						</audio>
-					<div class="container" >
-							<table class="table table-hover">
-							
-							  <tbody>
-								  <!--1-->
-								<tr>
-								  <td><b>Ọ̀rẹ́ 1:</b></td>
-								  <td style="color:#E45447;">Ẹ ǹlẹ́ o. <br> Báwo ni o?</td>
-								  <td>Hello. <br> How are you? 
-										</td>
-								</tr>
-								
-									  <tr>
-											<td><b>Ọ̀rẹ́ 2:</b></td>
-											<td style="color:#E45447;">Dáadáa ni o.</td>
-											<td>Fine.</td>
-										  </tr>
-	
-	
-										  <tr>
-												<td><b>Ọ̀rẹ́ 1:</b></td>
-												<td style="color:#E45447;">Ṣé ẹ wà o? <br> Ṣé nǹkan ń lọ dáadáa o? </td>
-												<td>Hope you are good? <br>	Hope everything is fine?</td>
-											  </tr>
-	
-											  <tr>
-													<td><b>Ọ̀rẹ́ 2:</b></td>
-													<td style="color:#E45447;">Mo wà o. A dúpẹ́.</td>
-													<td>I am fine. Thank you.</td>
-												  </tr>
-	
-												  <tr>
-														<td><b>Ọ̀rẹ́ 1:</b></td>
-														<td style="color:#E45447;">Mo ní kí n kí i yín ni o.</td>
-														<td>I just wish to check on you. </td>
-													  </tr>
-	
-													  <tr>
-															<td><b>Ọ̀rẹ́ 2:</b></td>
-															<td style="color:#E45447;">Aah! Ẹ ṣeun o. <br> Láyọ̀ lẹ ó délé o.</td>
-															<td>Aah! Thank you. <br> May you get home safely.</td>
-														  </tr>
-	
-														  <tr>
-																<td><b>Ọ̀rẹ́ 1:</b></td>
-																<td style="color:#E45447;">Àmín o.</td>
-																<td>Amen</td>
-															  </tr>
-					
-											 
-																									  
-											 
-							  </tbody>
-							</table>
-						  </div>
-					
-			</div>
-		</div>
-
-
-	<!--End of Lesson 6-->
-
-
-
-
-
-
-
-
-
-
-										
-
-
-
-									</div>
-
-								</div>
-							
-						
-							</div>
-						
-						
-						
-						
 						
 						
 						
@@ -1118,14 +696,7 @@
 						</div>
 
 
-						<div class="tab_panel curriculum">
-							<div class="panel_title">About this course</div>
-							<div class="panel_text">
-								<p>Nam egestas lorem ex, sit amet commodo tortor faucibus a. Suspendisse commodo, turpis a dapibus fermentum, turpis ipsum rhoncus massa, sed commodo nisi lectus id ipsum. Sed nec elit vehicula, aliquam neque euismod, porttitor ex. Nam consequat iaculis maximus. Suspendisse potenti. In rutrum justo et diam egestas luctus. Mauris eu neque eget odio suscipit eleifend. Sed imperdiet ante quis felis tempor hendrerit. Curabitur eget fermentum ipsum. Sed efficitur eget velit eu vulputate. Duis tincidunt quam in erat dignissim consequat. Praesent tempus leo eu nisl fringilla interdum. Maecenas rutrum libero eget lacus bibendum tristique. Curabitur at felis lobortis, mollis ante ut, tempus elit. Morbi justo nisi, posuere sed augue id, iaculis tincidunt mi. Pellentesque sed dolor sed dui congue tempus a et felis.</p>
-							</div>
-							
-								
-						</div>
+					
 
 
 
