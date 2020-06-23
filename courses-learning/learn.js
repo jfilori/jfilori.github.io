@@ -20,7 +20,7 @@ function splitString() {
 
     var string = document.getElementById('search-input').value;
     string = string.toLowerCase();
-
+    arrr = [];
     if(string.length >0){
     var splitters = ["gb","GB","b","B","d","D","f","F","g","G","j","J","k","K","l","L","m","n","N","M","p","P","r","R","ṣh","Ṣh","s","S","ṣ","Ṣ","t","T",
     "w","W","y","Y"];
@@ -87,6 +87,7 @@ function checkTone(splitted, number){
 }
 
 function playSound(){
+    soundstoplay = [];
     for (i = 0; i < arrr.length; i++) {
     
         if(arrr[i].length >0)
