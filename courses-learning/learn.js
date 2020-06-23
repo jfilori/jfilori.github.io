@@ -16,19 +16,23 @@ var soundstoplay = [];
 
 
 function splitString() {
+    document.getElementById('playtext').innerHTML = "Loading... Please wait....";
+
     var string = document.getElementById('search-input').value;
+    string = string.toLowerCase();
 
     if(string.length >0){
-    var splitters = ["gb","GB","b","B","d","D","f","F","g","G","j","J","k","K","l","L","m","n","N","M","p","P","r","R","s","S","ṣ","Ṣ","t","T",
+    var splitters = ["gb","GB","b","B","d","D","f","F","g","G","j","J","k","K","l","L","m","n","N","M","p","P","r","R","ṣh","Ṣh","s","S","ṣ","Ṣ","t","T",
     "w","W","y","Y"];
     var list = [string];
     for(var i=0, len=splitters.length; i<len; i++) {
         traverseList(list, splitters[i], 0);
     }
      arrr = (flatten(list));
+    console.log(arrr);
     document.getElementById('playtext').innerHTML = "Click to play Sound";
     document.getElementById('playhide').style.display="inline";
-    console.log(arrr);
+
 }else{
     alert('Invalid word');
 }
@@ -85,19 +89,25 @@ function checkTone(splitted, number){
 function playSound(){
     for (i = 0; i < arrr.length; i++) {
     
-        if(arrr[i].length >0){
-                 console.log(arrr[i]);
+        if(arrr[i].length >0)
+        {
+                console.log(arrr[i]);
                 checkTone(arrr[i], i);
-    
                 //Do some stuff here
-             }
-        else{
-            soundstoplay[i] = "null";
+         }
+        else
+        {
+        
+            soundstoplay[i] = "";
+
         }
     
     }
 
+    soundstoplay = soundstoplay.filter(Boolean);
+
     console.log(soundstoplay);
+
     playAllSOund();
 } 
 
@@ -112,14 +122,15 @@ function playAllSOund(){
     var audio = new Audio(),
     i = 0;
     var playlist = soundstoplay;
-
-audio.addEventListener('ended', function () {
+    console.log(playlist);
+    audio.addEventListener('ended', function () {
   if(start){
     i = ++i < playlist.length ? i : 0;
     console.log(i);
     audio.src = playlist[i];
     audio.play();
-  if(i== playlist.length-1){
+
+ if(i== playlist.length-1){
       start = false;
   }  
 }
