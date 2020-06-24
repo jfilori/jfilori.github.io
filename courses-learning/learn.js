@@ -15,6 +15,39 @@ var nasaloke = ["ń", "Ń", "ḿ", "Ḿ", "ń", "Ń", "ḿ", "Ḿ"];
 var soundstoplay = [];
 
 
+function resplitString(newstring) {
+    document.getElementById('playtext').innerHTML = "Loading... Please wait....";
+
+    var string = newstring;
+    string = string.toLowerCase();
+    arrr = [];
+    if(string.length >0){
+    var splitters = ["gb","GB","b","B","d","D","f","F","g","G","j","J","k","K","l","L","m","n","N","M","p","P","r","R","ṣh","Ṣh","s","S","ṣ","Ṣ","t","T","w","W","y","Y"];
+    var list = [string];
+    
+    for(var i=0, len=splitters.length; i<len; i++) {
+        traverseList(list, splitters[i], 0);
+    }
+    
+    arrr = (flatten(list));
+  console.log(arrr);
+    document.getElementById('playtext').innerHTML = "Click to play Sound";
+    document.getElementById('playhide').style.display="inline";
+    
+}
+else{
+
+    alert('Invalid word');
+
+}
+
+}
+
+
+
+
+
+
 function splitString() {
     document.getElementById('playtext').innerHTML = "Loading... Please wait....";
 
@@ -22,21 +55,33 @@ function splitString() {
     string = string.toLowerCase();
     arrr = [];
     if(string.length >0){
-    var splitters = ["gb","GB","b","B","d","D","f","F","g","G","j","J","k","K","l","L","m","n","N","M","p","P","r","R","ṣh","Ṣh","s","S","ṣ","Ṣ","t","T",
-    "w","W","y","Y"];
+    var splitters = ["gb","GB","b","B","d","D","f","F","g","G","j","J","k","K","l","L","m","n","N","M","p","P","r","R","ṣh","Ṣh","s","S","ṣ","Ṣ","t","T","w","W","y","Y"];
     var list = [string];
+    
     for(var i=0, len=splitters.length; i<len; i++) {
         traverseList(list, splitters[i], 0);
     }
-     arrr = (flatten(list));
+    
+    arrr = (flatten(list));
+    if(arrr[1].length>2){
+        console.log("Caught the error");
+        resplitString(arrr[1]);
+    }
+    else{
     console.log(arrr);
     document.getElementById('playtext').innerHTML = "Click to play Sound";
     document.getElementById('playhide').style.display="inline";
+    }
+}
+else{
 
-}else{
     alert('Invalid word');
+
 }
+
 }
+
+
 
 traverseList = function(list, splitter, index) {
     if(list[index]) {
