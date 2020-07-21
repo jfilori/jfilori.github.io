@@ -43,10 +43,25 @@ else{
 
 }
 
+function helpsplitString() {
+    document.getElementById('playtext').innerHTML = "Loading... Please wait....";
+    var string = document.getElementById('search-input').value;
+    string = string.toLowerCase();
+    if(string.length >0){
+   
+    arrr = [];
+    arrr = string.split("");
+    console.log(arrr);
+    document.getElementById('playtext').innerHTML = "Click to play Sound";
+    document.getElementById('playhide').style.display="inline";
+    } 
+    
+else{
 
+    alert('Invalid word');
 
-
-
+}
+}
 
 function splitString() {
     document.getElementById('playtext').innerHTML = "Loading... Please wait....";
@@ -55,15 +70,17 @@ function splitString() {
     string = string.toLowerCase();
     arrr = [];
     if(string.length >0){
-    var splitters = ["gb","GB","b","B","d","D","f","F","g","G","j","J","k","K","l","L","m","n","N","M","p","P","r","R","ṣh","Ṣh","s","S","ṣ","Ṣ","t","T","w","W","y","Y"];
+    var splitters = ["gb","GB","b","B","d","D","f","F","g","G","j","J","k","K","l","L","m","n","N","M","p","P","r","R","ṣh","Ṣh","s","S","ṣ","Ṣ","t","T","w","W","y","Y"," "];
     var list = [string];
-    
     for(var i=0, len=splitters.length; i<len; i++) {
         traverseList(list, splitters[i], 0);
     }
     
     arrr = (flatten(list));
-    if(arrr[1].length>2){
+    if(list.length > 1){
+   
+   
+    if(arrr[arrr.length-1].length>2){
         console.log("Caught the error");
         resplitString(arrr[1]);
     }
@@ -72,6 +89,22 @@ function splitString() {
     document.getElementById('playtext').innerHTML = "Click to play Sound";
     document.getElementById('playhide').style.display="inline";
     }
+}
+else
+{
+console.log(arrr);
+if(arrr[arrr.length-1].length>2){
+    console.log("Caught the error");
+    resplitString(arrr[arrr.length-1]);
+
+}
+else{
+    console.log(arrr);
+document.getElementById('playtext').innerHTML = "Click to play Sound";
+document.getElementById('playhide').style.display="inline";
+}
+}
+
 }
 else{
 
@@ -168,6 +201,7 @@ function playAllSOund(){
     var audio = new Audio(),
     i = 0;
     var playlist = soundstoplay;
+    if(playlist.length !=1){
     console.log(playlist);
     audio.addEventListener('ended', function () {
   if(start){
@@ -187,6 +221,13 @@ audio.volume = 0.5;
 audio.loop = false;
 audio.src = playlist[0];
 audio.play();
+}
+else{
+    audio.volume = 0.5;
+    audio.loop = false;
+    audio.src = playlist[0];
+    audio.play();  
+}
 
 }
   
