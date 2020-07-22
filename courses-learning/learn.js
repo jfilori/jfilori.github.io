@@ -8,9 +8,9 @@ var faweliarin = ["a", "A", "e", "E", "ẹ", "Ẹ", "I" ,"I", "o", "O." ,"ọ", 
 var fawelisale = ["à", "À", "è", "È", "ẹ̀", "Ẹ̀", "ì", "Ì", "ò", "Ò", "ọ̀", "Ọ̀", "ù", "Ù", "à", "À", "è",
                         "È" ,"ẹ̀", "Ẹ̀", "ì", "Ì", "ò", "Ò", "ọ̀", "Ọ̀", "ù", "Ù"];
 
-var nasalisale = ["ǹ", "Ǹ", "m̀", "M̀", "ǹ", "Ǹ", "m̀", "M̀"];
+var nasalisale = ["ǹ", "Ǹ", "m̀", "M̀", "ǹ", "Ǹ", "m̀", "M̀", "̀"];
 
-var nasaloke = ["ń", "Ń", "ḿ", "Ḿ", "ń", "Ń", "ḿ", "Ḿ"];
+var nasaloke = ["ń", "Ń", "ḿ", "Ḿ", "ń", "Ń", "ḿ", "Ḿ", "́"];
 
 var soundstoplay = [];
 
@@ -167,11 +167,32 @@ function checkTone(splitted, number){
 function playSound(){
     soundstoplay = [];
     for (i = 0; i < arrr.length; i++) {
-    
+       
         if(arrr[i].length >0)
         {
+            var j = i+1;
+            if(j<=arrr.length-1){
+                if(nasaloke.includes(arrr[j])){
+                    i = j;
+                    console.log(arrr[i]);
+                    checkTone(arrr[i], i);
+    
+                }
+                else if(nasalisale.includes(arrr[j])){
+                    i = j;
+                    console.log(arrr[i]);
+                    checkTone(arrr[i], i);
+
+                }
+                else{
+                    console.log(arrr[i]);
+                    checkTone(arrr[i], i); 
+                }
+            }else{
                 console.log(arrr[i]);
-                checkTone(arrr[i], i);
+                checkTone(arrr[i], i); 
+
+            }
                 //Do some stuff here
          }
         else
